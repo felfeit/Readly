@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemWorks"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="8dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/itemWorksCover"
+        android:layout_width="@dimen/_64sdp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="3:4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Small"
+        tools:src="@tools:sample/backgrounds/scenic" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/itemWorksTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/itemWorksCover"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Don Quixote" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/itemWorksAuthor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/itemWorksTitle"
+        app:layout_constraintTop_toBottomOf="@id/itemWorksTitle"
+        tools:text="Miguel de Cervantes" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/itemWorksPublishYear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/itemWorksAuthor"
+        app:layout_constraintTop_toBottomOf="@id/itemWorksAuthor"
+        tools:text="First Published: 2019" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/itemWorksEditionCount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/itemWorksTitle"
+        app:layout_constraintTop_toBottomOf="@id/itemWorksPublishYear"
+        tools:text="Edition Count: 20" />
+
+<!--    <com.google.android.material.button.MaterialButton-->
+<!--        android:id="@+id/itemWorksRemoveButton"-->
+<!--        style="@style/Widget.Material3.Button.TextButton"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/remove"-->
+<!--        android:textAppearance="@style/TextAppearance.Material3.LabelSmall"-->
+<!--        android:textColor="?colorError"-->
+<!--        app:icon="@drawable/baseline_bookmark_remove_24"-->
+<!--        app:iconTint="?colorError"-->
+<!--        android:visibility="gone"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/itemWorksEditionCount" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

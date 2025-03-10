@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_work_placeholder"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="8dp">
+
+    <!-- Placeholder for work_cover -->
+    <View
+        android:id="@+id/work_cover_placeholder"
+        android:layout_width="86dp"
+        android:layout_height="0dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintDimensionRatio="3:4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Placeholder for work_title -->
+    <View
+        android:id="@+id/work_title_placeholder"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/work_cover_placeholder"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Placeholder for work_author -->
+    <View
+        android:id="@+id/work_author_placeholder"
+        android:layout_width="0dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/work_title_placeholder"
+        app:layout_constraintTop_toBottomOf="@id/work_title_placeholder" />
+
+    <!-- Placeholder for work_publish_year -->
+    <View
+        android:id="@+id/work_publish_year_placeholder"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/work_title_placeholder"
+        app:layout_constraintTop_toBottomOf="@id/work_author_placeholder" />
+
+    <!-- Placeholder for work_edition_count -->
+    <View
+        android:id="@+id/work_edition_count_placeholder"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/work_title_placeholder"
+        app:layout_constraintTop_toBottomOf="@id/work_publish_year_placeholder" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

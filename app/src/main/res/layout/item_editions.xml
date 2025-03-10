@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemEditions"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="8dp">
+
+    <!-- Cover Buku -->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/itemEditionsCover"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="2:3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Small"
+        tools:src="@tools:sample/backgrounds/scenic" />
+
+    <!-- Judul Buku -->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/itemEditionsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+        app:layout_constraintStart_toEndOf="@id/itemEditionsCover"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Fantastic Mr. Fox" />
+
+    <!-- Tanggal Publikasi -->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/itemEditionsPublishDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+        app:layout_constraintStart_toEndOf="@id/itemEditionsCover"
+        app:layout_constraintTop_toBottomOf="@id/itemEditionsTitle"
+        tools:text="Published: 1987-01-01" />
+
+    <!-- Penerbit -->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/itemEditionsPublisher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+        app:layout_constraintStart_toEndOf="@id/itemEditionsCover"
+        app:layout_constraintTop_toBottomOf="@id/itemEditionsPublishDate"
+        tools:text="Publisher: Puffin Books" />
+
+    <!-- Jumlah Halaman -->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/itemEditionsPages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+        app:layout_constraintStart_toEndOf="@id/itemEditionsCover"
+        app:layout_constraintTop_toBottomOf="@id/itemEditionsPublisher"
+        tools:text="Pages: 320" />
+
+    <!-- ISBN -->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/itemEditionsISBN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+        app:layout_constraintStart_toEndOf="@id/itemEditionsCover"
+        app:layout_constraintTop_toBottomOf="@id/itemEditionsPages"
+        tools:text="ISBN: 978-1234567890" />
+
+    <!-- Revisi -->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/itemEditionsRevision"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+        app:layout_constraintStart_toEndOf="@id/itemEditionsCover"
+        app:layout_constraintTop_toBottomOf="@id/itemEditionsISBN"
+        tools:text="Revision: 6" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
