@@ -1,6 +1,5 @@
 package com.felfeit.readly.presentation.views;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -16,17 +15,14 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import com.felfeit.readly.presentation.viewmodels.MainViewModel;
 import com.felfeit.readly.databinding.ActivityMainBinding;
-import com.felfeit.readly.domain.model.Work;
 import com.felfeit.readly.presentation.adapter.WorkAdapter;
-import com.felfeit.readly.presentation.ui.WorkDetailActivity;
+import com.felfeit.readly.presentation.viewmodels.MainViewModel;
 
 import dagger.hilt.android.AndroidEntryPoint;
 
 @AndroidEntryPoint
-public class MainActivity extends AppCompatActivity
-        implements WorkAdapter.OnClickListener {
+public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
     private WorkAdapter adapter;
@@ -43,7 +39,7 @@ public class MainActivity extends AppCompatActivity
         viewModel = new ViewModelProvider(this).get(MainViewModel.class);
 
         // Setup RecyclerView
-        adapter = new WorkAdapter(this, null);
+        adapter = new WorkAdapter();
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         layoutManager.setItemPrefetchEnabled(true);
         binding.rvWorks.setLayoutManager(layoutManager);
@@ -97,13 +93,5 @@ public class MainActivity extends AppCompatActivity
     protected void onDestroy() {
         super.onDestroy();
         binding = null;
-    }
-
-    @Override
-    public void onItemClick(Work work) {
-        Intent intent = new Intent(MainActivity.this, WorkDetailActivity.class);
-        intent.putExtra("EXTRA_WORK", work); // Mengirim objek Work
-        intent.putExtra("EXTRA_OLID", work.getKey());
-        startActivity(intent);
     }
 }

@@ -1,63 +1,64 @@
 package com.felfeit.readly.data.source.remote.response.search;
 
-import java.util.List;
 import com.google.gson.annotations.SerializedName;
 
-public class SearchBooksResponse{
+import java.util.List;
 
-	@SerializedName("q")
-	private String q;
+public class SearchBooksResponse {
 
-	@SerializedName("offset")
-	private Object offset;
+    @SerializedName("q")
+    private String q;
 
-	@SerializedName("docs")
-	private List<DocsItem> docs;
+    @SerializedName("offset")
+    private Object offset;
 
-	@SerializedName("numFound")
-	private int numFound;
+    @SerializedName("docs")
+    private List<DocsItem> docs;
 
-	@SerializedName("start")
-	private int start;
+    @SerializedName("numFound")
+    private int numFound;
 
-	@SerializedName("documentation_url")
-	private String documentationUrl;
+    @SerializedName("start")
+    private int start;
 
-	@SerializedName("numFoundExact")
-	private boolean numFoundExact;
+    @SerializedName("documentation_url")
+    private String documentationUrl;
 
-	@SerializedName("num_found")
-	private int num_Found;
+    @SerializedName("numFoundExact")
+    private boolean numFoundExact;
 
-	public String getQ(){
-		return q;
-	}
+    @SerializedName("num_found")
+    private int num_Found;
 
-	public Object getOffset(){
-		return offset;
-	}
+    public String getQ() {
+        return q;
+    }
 
-	public List<DocsItem> getDocs(){
-		return docs;
-	}
+    public Object getOffset() {
+        return offset;
+    }
 
-	public int getNumFound(){
-		return numFound;
-	}
+    public List<DocsItem> getDocs() {
+        return docs;
+    }
 
-	public int getStart(){
-		return start;
-	}
+    public int getNumFound() {
+        return numFound;
+    }
 
-	public String getDocumentationUrl(){
-		return documentationUrl;
-	}
+    public int getStart() {
+        return start;
+    }
 
-	public boolean isNumFoundExact(){
-		return numFoundExact;
-	}
+    public String getDocumentationUrl() {
+        return documentationUrl;
+    }
 
-	public int num_Found(){
-		return num_Found;
-	}
+    public boolean isNumFoundExact() {
+        return numFoundExact;
+    }
+
+    public int num_Found() {
+        return num_Found;
+    }
 }

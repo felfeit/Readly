@@ -1,53 +1,54 @@
 package com.felfeit.readly.data.source.remote.response.search;
 
-import java.util.List;
 import com.google.gson.annotations.SerializedName;
 
-public class DocsItem{
+import java.util.List;
 
-	@SerializedName("author_name")
-	private List<String> authorName;
+public class DocsItem {
 
-	@SerializedName("edition_count")
-	private int editionCount;
+    @SerializedName("author_name")
+    private List<String> authorName;
 
-	@SerializedName("first_publish_year")
-	private int firstPublishYear;
+    @SerializedName("edition_count")
+    private int editionCount;
 
-	@SerializedName("cover_edition_key")
-	private String coverEditionKey;
+    @SerializedName("first_publish_year")
+    private int firstPublishYear;
 
-	@SerializedName("title")
-	private String title;
+    @SerializedName("cover_edition_key")
+    private String coverEditionKey;
 
-	@SerializedName("key")
-	private String key;
+    @SerializedName("title")
+    private String title;
 
-	public List<String> getAuthorName(){
-		return authorName;
-	}
+    @SerializedName("key")
+    private String key;
 
-	public int getEditionCount(){
-		return editionCount;
-	}
+    public List<String> getAuthorName() {
+        return authorName;
+    }
 
-	public int getFirstPublishYear(){
-		return firstPublishYear;
-	}
+    public int getEditionCount() {
+        return editionCount;
+    }
 
-	public String getCoverEditionKey(){
-		return "https://covers.openlibrary.org/b/olid/" + coverEditionKey + "-M.jpg";
-	}
+    public int getFirstPublishYear() {
+        return firstPublishYear;
+    }
 
-	public String getTitle(){
-		return title;
-	}
+    public String getCoverEditionKey() {
+        return "https://covers.openlibrary.org/b/olid/" + coverEditionKey + "-M.jpg";
+    }
 
-	public String getKey() {
-		return key;
-	}
+    public String getTitle() {
+        return title;
+    }
 
-	public boolean hasCover() {
-		return coverEditionKey != null && !coverEditionKey.isEmpty();
-	}
+    public String getKey() {
+        return key;
+    }
+
+    public boolean hasCover() {
+        return coverEditionKey != null && !coverEditionKey.isEmpty();
+    }
 }
